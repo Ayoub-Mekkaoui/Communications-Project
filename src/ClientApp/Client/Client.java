@@ -12,15 +12,14 @@ public class Client {
 	private DataInputStream inputStream;
 	private Socket socket;
 	private int port;
-	private Queue messageQueue;
+	private Queue inboundRequestQueue;
+	private Queue outboundResponseQueue;
 	private User userData;
 	private Map ChatBoxList;
 	
     public static void main(String[] args) {
 
     }
-
-//testing commit
 
 public DataInputStream ClientMessageThread() {
 	return null;
