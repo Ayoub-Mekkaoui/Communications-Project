@@ -121,7 +121,7 @@ public class MessageHandler {
         // Iterate through client handlers to find the matching userID
         for (ClientHandler handler : Server.getClientHandlers()) {
             if (handler.getUser().getUserID() == userID) {
-                return handler;
+                return handler; 
             }
         }
         return null;

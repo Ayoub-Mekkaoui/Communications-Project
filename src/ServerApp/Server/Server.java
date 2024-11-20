@@ -15,7 +15,7 @@ import ServerApp.User.User;
 public class Server {
 	
 	private String ipAddress;
-	private List<ClientHandler> clientHandler;
+	private static List<ClientHandler> clientHandler;
 	private MessageHandler messageHandler;
 	private HashMap<String, User> userDB;
 	private static ServerSocket serverSocket=null;
@@ -61,8 +61,8 @@ public class Server {
 	public int getPort() {
 		return this.port;
 	}
-	public List<ClientHandler> getClientHandlers(){
-		return this.clientHandler;
+	public static List<ClientHandler> getClientHandlers(){
+		return clientHandler;
 	}
 	private void startServer(int port) throws IOException{
 		serverSocket = new ServerSocket(port);		//creates a new ServerSocket object that listens for incoming connections
